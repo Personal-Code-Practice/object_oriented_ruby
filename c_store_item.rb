@@ -1,7 +1,8 @@
-class StoreItem
+require './m_countable'
 
+class StoreItem
+  include Countable
   attr_reader :type, :price, :location
-  attr_writer :type, :price, :location
 
   def initialize(input_options)
     @type = input_options[:type]
@@ -9,7 +10,7 @@ class StoreItem
     @location = input_options[:location]
   end
 
-  def print_info
+  def general_info
     p "#{type.capitalize} can be found in #{location}."
     p "Price: $#{price}"
   end

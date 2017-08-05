@@ -1,7 +1,8 @@
+require './m_countable'
+
 class Food < StoreItem
 
   attr_reader :expiration_date
-  attr_writer :expiration_date
 
   def initialize(input_options)
     super
